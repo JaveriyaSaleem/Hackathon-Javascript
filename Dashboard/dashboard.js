@@ -86,10 +86,10 @@ async function fetchWhenReload(){
         querySnapshot.forEach(async(doc) => {
           // doc.data() is never undefined for query doc snapshots
           console.log(doc.id, " => ", doc.data().Name);
-        //   let makeTime = doc.data().Timestamp.toDate()
-        //   let date = new Date(makeTime)
-        //   let time = moment(date).format("MMM Do YY")
-        //   console.log(time)
+          let makeTime = doc.data().Timestamp.toDate()
+          let date = new Date(makeTime)
+          let time = moment(date).format("MMM Do")
+          console.log(time)
 
         let createElement = document.createElement('div')
         createElement.setAttribute('id','post')
@@ -97,7 +97,7 @@ async function fetchWhenReload(){
         allPosts.prepend(createElement)
         let postDiv = document.getElementById('post')
         postDiv.innerHTML=`                <div>
-                <p class="font-medium">Mar 1</p>
+                <p class="font-medium">${time}</p>
                 <h1 class="font-bold text-[26px]">${doc.data().PostTitle}</h1>
                     <p>${doc.data().Post}</p>
                         <div class="flex flex-row items-center gap-2">
