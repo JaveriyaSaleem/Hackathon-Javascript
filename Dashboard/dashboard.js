@@ -13,8 +13,209 @@ let  technology= document.getElementById('technology')
 let  design= document.getElementById('design')
 let  company= document.getElementById('company')
 let allPosts = document.getElementById('allPosts')
-work.addEventListener('click',(()=>{
+// technology 
+technology.addEventListener('click',(async()=>{
+    allPosts.innerHTML =""
+    console.log("hello")
     
+    try{
+        const q = query(collection(db, "Posts"), where("Topic", "==", "Technology"));
+        const querySnapshot = await getDocs(q);
+     querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data().Post);
+  let createElement = document.createElement('div')
+  createElement.setAttribute('id','post')
+  createElement.setAttribute('class','border p-2 m-2')
+  let makeTime = doc.data().Timestamp.toDate()
+  let date = new Date(makeTime)
+  let time = moment(date).format("MMM Do")
+  console.log(time)
+  allPosts.prepend(createElement)
+  let postDiv = document.getElementById('post')
+  postDiv.innerHTML=`<div>
+          <p class="font-medium">${time}</p>
+          <h1 class="font-bold text-[26px]">${doc.data().PostTitle}</h1>
+              <p>${doc.data().Post}</p>
+                  <div class="flex flex-row items-center gap-2">
+                  <button class="py-1 px-4 border-2 border-[#b4b4b4] rounded-full">${doc.data().Topic}</button> <p>By ${doc.data().Name}</p> <span class="font-medium">7 min read</span>
+              </div>
+          </div>`
+
+});
+    }catch(e){  
+        console.log(e)
+    }
+}))
+// company
+company.addEventListener('click',(async()=>{
+    allPosts.innerHTML =""
+    console.log("hello")
+    
+    try{
+        const q = query(collection(db, "Posts"), where("Topic", "==", "Company"));
+        const querySnapshot = await getDocs(q);
+     querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data().Post);
+  let createElement = document.createElement('div')
+  createElement.setAttribute('id','post')
+  createElement.setAttribute('class','border p-2 m-2')
+  let makeTime = doc.data().Timestamp.toDate()
+  let date = new Date(makeTime)
+  let time = moment(date).format("MMM Do")
+  console.log(time)
+  allPosts.prepend(createElement)
+  let postDiv = document.getElementById('post')
+  postDiv.innerHTML=`<div>
+          <p class="font-medium">${time}</p>
+          <h1 class="font-bold text-[26px]">${doc.data().PostTitle}</h1>
+              <p>${doc.data().Post}</p>
+                  <div class="flex flex-row items-center gap-2">
+                  <button class="py-1 px-4 border-2 border-[#b4b4b4] rounded-full">${doc.data().Topic}</button> <p>By ${doc.data().Name}</p> <span class="font-medium">7 min read</span>
+              </div>
+          </div>`
+
+});
+    }catch(e){  
+        console.log(e)
+    }
+}))
+// design 
+design.addEventListener('click',(async()=>{
+    allPosts.innerHTML =""
+    console.log("hello")
+    
+    try{
+        const q = query(collection(db, "Posts"), where("Topic", "==", "Design"));
+        const querySnapshot = await getDocs(q);
+     querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data().Post);
+  let createElement = document.createElement('div')
+  createElement.setAttribute('id','post')
+  createElement.setAttribute('class','border p-2 m-2')
+  let makeTime = doc.data().Timestamp.toDate()
+  let date = new Date(makeTime)
+  let time = moment(date).format("MMM Do")
+  console.log(time)
+  allPosts.prepend(createElement)
+  let postDiv = document.getElementById('post')
+  postDiv.innerHTML=`<div>
+          <p class="font-medium">${time}</p>
+          <h1 class="font-bold text-[26px]">${doc.data().PostTitle}</h1>
+              <p>${doc.data().Post}</p>
+                  <div class="flex flex-row items-center gap-2">
+                  <button class="py-1 px-4 border-2 border-[#b4b4b4] rounded-full">${doc.data().Topic}</button> <p>By ${doc.data().Name}</p> <span class="font-medium">7 min read</span>
+              </div>
+          </div>`
+
+});
+    }catch(e){  
+        console.log(e)
+    }
+}))
+//crypto
+crypto.addEventListener('click',(async()=>{
+    allPosts.innerHTML =""
+    console.log("hello")
+    
+    try{
+        const q = query(collection(db, "Posts"), where("Topic", "==", "Crypto"));
+        const querySnapshot = await getDocs(q);
+     querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data().Post);
+  let createElement = document.createElement('div')
+  createElement.setAttribute('id','post')
+  createElement.setAttribute('class','border p-2 m-2')
+  let makeTime = doc.data().Timestamp.toDate()
+  let date = new Date(makeTime)
+  let time = moment(date).format("MMM Do")
+  console.log(time)
+  allPosts.prepend(createElement)
+  let postDiv = document.getElementById('post')
+  postDiv.innerHTML=`<div>
+          <p class="font-medium">${time}</p>
+          <h1 class="font-bold text-[26px]">${doc.data().PostTitle}</h1>
+              <p>${doc.data().Post}</p>
+                  <div class="flex flex-row items-center gap-2">
+                  <button class="py-1 px-4 border-2 border-[#b4b4b4] rounded-full">${doc.data().Topic}</button> <p>By ${doc.data().Name}</p> <span class="font-medium">7 min read</span>
+              </div>
+          </div>`
+
+});
+    }catch(e){  
+        console.log(e)
+    }
+}))
+//artificialIntelligence
+artificialIntelligence.addEventListener('click',(async()=>{
+    allPosts.innerHTML =""
+    console.log("hello")
+    
+    try{
+        const q = query(collection(db, "Posts"), where("Topic", "==", "Artificial Intelligence"));
+        const querySnapshot = await getDocs(q);
+     querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data().Post);
+  let createElement = document.createElement('div')
+  createElement.setAttribute('id','post')
+  createElement.setAttribute('class','border p-2 m-2')
+  let makeTime = doc.data().Timestamp.toDate()
+  let date = new Date(makeTime)
+  let time = moment(date).format("MMM Do")
+  console.log(time)
+  allPosts.prepend(createElement)
+  let postDiv = document.getElementById('post')
+  postDiv.innerHTML=`<div>
+          <p class="font-medium">${time}</p>
+          <h1 class="font-bold text-[26px]">${doc.data().PostTitle}</h1>
+              <p>${doc.data().Post}</p>
+                  <div class="flex flex-row items-center gap-2">
+                  <button class="py-1 px-4 border-2 border-[#b4b4b4] rounded-full">${doc.data().Topic}</button> <p>By ${doc.data().Name}</p> <span class="font-medium">7 min read</span>
+              </div>
+          </div>`
+
+});
+    }catch(e){  
+        console.log(e)
+    }
+}))
+// work
+work.addEventListener('click',(async()=>{
+    allPosts.innerHTML =""
+    console.log("hello")
+    
+    try{
+        const q = query(collection(db, "Posts"), where("Topic", "==", "Work"));
+        const querySnapshot = await getDocs(q);
+     querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data().Post);
+  let createElement = document.createElement('div')
+  createElement.setAttribute('id','post')
+  createElement.setAttribute('class','border p-2 m-2')
+  let makeTime = doc.data().Timestamp.toDate()
+  let date = new Date(makeTime)
+  let time = moment(date).format("MMM Do")
+  console.log(time)
+  allPosts.prepend(createElement)
+  let postDiv = document.getElementById('post')
+  postDiv.innerHTML=`<div>
+          <p class="font-medium">${time}</p>
+          <h1 class="font-bold text-[26px]">${doc.data().PostTitle}</h1>
+              <p>${doc.data().Post}</p>
+                  <div class="flex flex-row items-center gap-2">
+                  <button class="py-1 px-4 border-2 border-[#b4b4b4] rounded-full">${doc.data().Topic}</button> <p>By ${doc.data().Name}</p> <span class="font-medium">7 min read</span>
+              </div>
+          </div>`
+
+});
+    }catch(e){  
+        console.log(e)
+    }
 }))
 // let searchBar = document.getElementById('searchBar')
 // let searchBtn = document.getElementById('searchBtn')
