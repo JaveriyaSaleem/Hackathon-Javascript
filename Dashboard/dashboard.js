@@ -49,7 +49,8 @@ doneBtn.addEventListener("click",(async()=>{
           Name: modalFullName.value,
           PostTitle: modalTitle.value,
           Post: modalPost.value,
-          Topic: selectedOption.value
+          Topic: selectedOption.value,
+          Timestamp: serverTimestamp(),
         });
         console.log("Document written with ID: ", docRef.id);
         let createElement = document.createElement('div')
