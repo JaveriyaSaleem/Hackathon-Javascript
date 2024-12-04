@@ -17,9 +17,18 @@
     <h1 class="text-[#b4b4b4] text-[26px]">Logo</h1>
                 <!-- search div  -->
                 <div
-                class="border-2 border-[#b4b4b4] rounded-full hover:text-[#b4b4b4] w-96 py-2 px-4 flex items-center justify-between">
-                <i class="fa-solid fa-magnifying-glass text-[#b4b4b4]"></i><input type="text"
-                    class="bg-transparent outline-none ms-2 text-[#b4b4b4]" placeholder="Search by Topics" id="searchBar"> <button class="searchBtn">Search</button>
+                class="border-2 border-[#b4b4b4] rounded-full hover:text-[#b4b4b4] w-96  ps-4 flex items-center justify-between">
+                <i class="fa-solid fa-magnifying-glass text-[#b4b4b4]"></i>                <form class="max-w-sm mx-auto">
+                  <select class="bg-white border border-gray-300 text-dark text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="selectedOptionOfSearch">
+                
+                    <option id="technology">Technology</option>
+                    <option id="design">Design</option>
+                    <option id="company">Company</option>
+                    <option id="crypto">Crypto</option>
+                    <option id="artificialIntelligence">Artificial Intelligence</option>
+                    <option id="work">Work</option>
+                  </select>
+                </form> <button class="hover:bg-[#B4B4B4] hover:text-white p-2 rounded-r-full" id="searchBtn">Search</button>
             </div>
             <button class="bg-[#1c5cff] text-white rounded-lg flex items-center px-2 gap-2">Login/Register <div class="bg-[#3d74ff] px-2 rounded-md"><i class="fa-solid fa-arrow-right"></i></div></button>
 </header>
@@ -112,7 +121,7 @@
             <!-- options  -->
             <div class="col-span-1">
                 <form class="max-w-sm mx-auto">
-                    <label for="countries" class="bg-white block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Blog Topics</label>
+                    <label for="selectedOption" class="bg-white block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Blog Topics</label>
                     <select class="bg-white border border-gray-300 text-dark text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="selectedOption">
                   
                       <option id="technology">Technology</option>

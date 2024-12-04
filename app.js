@@ -5,6 +5,11 @@ let getEmail = document.getElementById('email')
 let getPassword = document.getElementById('password')
 let getName = document.getElementById('name')
 let signIn = document.getElementById('signIn')
+document.getElementById('guest').addEventListener('click',(()=>{
+  setTimeout(()=>{
+    location.href="Dashboard/dashboard.html"
+  },1000)
+}))
 signIn.addEventListener('click',(()=>{
   location.href="Login/login.html"
 }))

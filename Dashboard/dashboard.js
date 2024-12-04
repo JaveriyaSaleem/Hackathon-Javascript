@@ -13,6 +13,45 @@ let  technology= document.getElementById('technology')
 let  design= document.getElementById('design')
 let  company= document.getElementById('company')
 let allPosts = document.getElementById('allPosts')
+document.getElementById('searchBtn').addEventListener('click', async () => {
+    const selectedCategory = document.getElementById('selectedOptionOfSearch').value; 
+    allPosts.innerHTML = ""; // Clear existing posts
+    console.log(`Selected category: ${selectedCategory}`);
+
+    try {
+        const q = query(collection(db, "Posts"), where("Topic", "==", selectedCategory));
+        const querySnapshot = await getDocs(q);
+
+        querySnapshot.forEach((doc) => {
+            console.log(doc.id, " => ", doc.data().Post);
+
+            let createElement = document.createElement('div');
+            createElement.setAttribute('id', 'post');
+            createElement.setAttribute('class', 'border p-2 m-2');
+
+            let makeTime = doc.data().Timestamp.toDate();
+            let date = new Date(makeTime);
+            let time = moment(date).format("MMM Do");
+
+            allPosts.prepend(createElement);
+
+            let postDiv = document.getElementById('post');
+            postDiv.innerHTML = `
+                <div>
+                    <p class="font-medium">${time}</p>
+                    <h1 class="font-bold text-[26px]">${doc.data().PostTitle}</h1>
+                    <p>${doc.data().Post}</p>
+                    <div class="flex flex-row items-center gap-2">
+                        <button class="py-1 px-4 border-2 border-[#b4b4b4] rounded-full">${doc.data().Topic}</button>
+                        <p>By ${doc.data().Name}</p>
+                        <span class="font-medium">7 min read</span>
+                    </div>
+                </div>`;
+        });
+    } catch (e) {
+        console.log(e);
+    }
+});
 // technology 
 technology.addEventListener('click',(async()=>{
     allPosts.innerHTML =""
