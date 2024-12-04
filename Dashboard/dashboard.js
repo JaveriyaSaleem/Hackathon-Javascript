@@ -13,6 +13,9 @@ let  technology= document.getElementById('technology')
 let  design= document.getElementById('design')
 let  company= document.getElementById('company')
 let allPosts = document.getElementById('allPosts')
+work.addEventListener('click',(()=>{
+    
+}))
 // let searchBar = document.getElementById('searchBar')
 // let searchBtn = document.getElementById('searchBtn')
 // searchBtn.addEventListener('click',(()=>{

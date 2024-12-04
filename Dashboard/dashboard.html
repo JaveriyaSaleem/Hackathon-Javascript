@@ -25,20 +25,27 @@
 </header>
 <!-- header done  -->
 
- <main class="grid grid-cols-12 md:grid-cols-8">
+ <main class="grid grid-cols-12 md:grid-cols-12">
     <!-- left side  -->
-    <div class="col-span-2 md:col-span-1 px-2 py-2 flex flex-col gap-3">
+    <div class="col-span-4 md:col-span-2 px-2 py-2 flex flex-col gap-3">
         <button class="bg-[#1c5cff] text-white rounded-lg flex items-center px-2 py-2 gap-2" id="addPost">Add Post <div class="bg-[#3d74ff] px-2 rounded-md"></div></button>
         <div>
         <h1 class="font-bold">Blog Topics</h1>
-        <ul>
-            <li id="company">Company</li>
-            <li id="design">Design</li>
-            <li id="technology">Technology</li>
-            <li id="crypto">Crypto</li>
-            <li id="artificialIntelligence">Artificial Intelligence</li>
-            <li id="work">Work</li>
-        </ul>
+       <div class="flex flex-col gap-2 pt-2">
+        <div>
+            <button class="hover:cursor-pointer py-1 px-2 border-1 border-[#b4b4b4] rounded-full hover:bg-[#3D74FF] hover:text-white">Company</button>
+            <button class="hover:cursor-pointer py-1 px-2 border-1 border-[#b4b4b4] rounded-full hover:bg-[#3D74FF] hover:text-white">Design</button>
+        </div>
+        <div>
+            <button class="hover:cursor-pointer py-1 px-2 border-1 border-[#b4b4b4] rounded-full hover:bg-[#3D74FF] hover:text-white">Technology</button>
+            <button class="hover:cursor-pointer py-1 px-2 border-1 border-[#b4b4b4] rounded-full hover:bg-[#3D74FF] hover:text-white">Crypto</button>
+        </div>
+        <div>
+            <button class="hover:cursor-pointer py-1 px-2 border-1 border-[#b4b4b4] rounded-full hover:bg-[#3D74FF] hover:text-white mb-2">Artificial Intelligence</button>
+            <button class="hover:cursor-pointer py-1 px-3 border-1 border-[#b4b4b4] rounded-full hover:bg-[#3D74FF] hover:text-white">Work</button>
+        </div>
+        </div>
+        
     </div>
     <div>
         <h1 class="font-bold">Blog Topics</h1>
@@ -54,7 +61,7 @@
 
     </div>
     <!-- right side  -->
-    <div class="col-span-10 md:col-span-4 ...">
+    <div class="col-span-4 md:col-span-6 ...">
         <!-- modal body  -->
       <div  id="modalBody"
       class= "hidden animation fixed z-50 flex justify-center items-center w-full md:inset-0 ">
@@ -107,12 +114,12 @@
                     <label for="countries" class="bg-white block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Blog Topics</label>
                     <select class="bg-white border border-gray-300 text-dark text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="selectedOption">
                   
-                      <option>Technology</option>
-                      <option>Design</option>
-                      <option>Company</option>
-                      <option>Crypto</option>
-                      <option>Artificial Intelligence</option>
-                      <option>Work</option>
+                      <option id="technology">Technology</option>
+                      <option id="design">Design</option>
+                      <option id="company">Company</option>
+                      <option id="crypto">Crypto</option>
+                      <option id="artificialIntelligence">Artificial Intelligence</option>
+                      <option id="work">Work</option>
                     </select>
                   </form>
             </div>
