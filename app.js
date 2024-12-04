@@ -4,6 +4,10 @@ let registerBtn = document.getElementById('signUpBtn')
 let getEmail = document.getElementById('email')
 let getPassword = document.getElementById('password')
 let getName = document.getElementById('name')
+let signIn = document.getElementById('signIn')
+signIn.addEventListener('click',(()=>{
+  location.href="Login/login.html"
+}))
 registerBtn.addEventListener('click',(()=>{
   const email = getEmail.value.trim();
 const password = getPassword.value.trim();
