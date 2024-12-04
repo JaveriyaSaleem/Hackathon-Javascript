@@ -12,13 +12,58 @@
 
 </head>
 <body class="bg-[#f9f9f9]">
-            <!-- search div  -->
-<header class="flex justify-between px-4 pt-3">
-    <h1 class="text-[#b4b4b4] text-[26px]">Logo</h1>
+  <!-- offcanvas  -->
+  <nav class="block md:hidden navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- list of content in hamburger  -->
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-2">
+
+            <!-- 1st -->
+            <li class="nav-item">
+              <div
+              class="border-2 border-[#b4b4b4] rounded-full hover:text-[#b4b4b4] md:w-96  ps-4 flex items-center justify-between order-3 md:order-2">
+              <i class="fa-solid fa-magnifying-glass text-[#b4b4b4]"></i><form class="max-w-sm mx-auto">
+                <select class="bg-white border border-gray-300 text-dark text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="selectedOptionOfSearch">
+              
+                  <option id="technology">Technology</option>
+                  <option id="design">Design</option>
+                  <option id="company">Company</option>
+                  <option id="crypto">Crypto</option>
+                  <option id="artificialIntelligence">Artificial Intelligence</option>
+                  <option id="work">Work</option>
+                </select>
+              </form> <button class="hover:bg-[#B4B4B4] hover:text-white p-2 rounded-r-full" id="searchBtn">Search</button>
+          </div>
+            </li>
+            <li class="nav-item ">
+              <!-- 2nd  -->
+              <button class="bg-[#1c5cff] text-white rounded-lg flex items-center px-2 py-2 gap-2" id="addPost">Add Post <div class="bg-[#3d74ff] px-2 rounded-md"></div></button>
+            </li>
+            <li class="nav-item">
+              <button class="w-40 order-2 md:order-3 bg-[#1c5cff] text-white rounded-lg flex items-center flex-row px-2 gap-2 py-2">Login/Register<div class="bg-[#3d74ff] px-2 rounded-md"><i class="fa-solid fa-arrow-right inline-block"></i></div></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+            <!-- header -->
+<header class="flex flex-col md:flex-row md:justify-between px-4 pt-3 w-full gap-2">
+    <h1 class="text-[#b4b4b4] text-[20px] md:text-[26px]">Logo</h1>
                 <!-- search div  -->
                 <div
-                class="border-2 border-[#b4b4b4] rounded-full hover:text-[#b4b4b4] w-96  ps-4 flex items-center justify-between">
-                <i class="fa-solid fa-magnifying-glass text-[#b4b4b4]"></i>                <form class="max-w-sm mx-auto">
+                class="border-2 border-[#b4b4b4] rounded-full hover:text-[#b4b4b4] md:w-96  ps-4 flex items-center justify-between">
+                <i class="fa-solid fa-magnifying-glass text-[#b4b4b4]"></i><form class="max-w-sm mx-auto">
                   <select class="bg-white border border-gray-300 text-dark text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="selectedOptionOfSearch">
                 
                     <option id="technology">Technology</option>
@@ -30,14 +75,14 @@
                   </select>
                 </form> <button class="hover:bg-[#B4B4B4] hover:text-white p-2 rounded-r-full" id="searchBtn">Search</button>
             </div>
-            <button class="bg-[#1c5cff] text-white rounded-lg flex items-center px-2 gap-2">Login/Register <div class="bg-[#3d74ff] px-2 rounded-md"><i class="fa-solid fa-arrow-right"></i></div></button>
+            <button class="w-40  bg-[#1c5cff] text-white rounded-lg flex items-center flex-row px-2 gap-2 py-2">Login/Register<div class="bg-[#3d74ff] px-2 rounded-md"><i class="fa-solid fa-arrow-right inline-block"></i></div></button>
 </header>
 <!-- header done  -->
 
- <main class="grid grid-cols-12 md:grid-cols-12">
+ <main class="grid grid-cols-12">
     <!-- left side  -->
-    <div class="col-span-4 md:col-span-2 px-2 py-2 flex flex-col gap-3">
-        <button class="bg-[#1c5cff] text-white rounded-lg flex items-center px-2 py-2 gap-2" id="addPost">Add Post <div class="bg-[#3d74ff] px-2 rounded-md"></div></button>
+    <div class="col-span-2 px-2 py-2 flex flex-col gap-3 hidden md:block">
+        <button class="bg-[#1c5cff] text-white rounded-lg flex items-center px-2 py-2 gap-2" id="addPost2">Add Post <div class="bg-[#3d74ff] px-2 rounded-md"></div></button>
         <div>
         <h1 class="font-bold">Blog Topics</h1>
        <div class="flex flex-col gap-2 pt-2">
@@ -71,7 +116,7 @@
 
     </div>
     <!-- right side  -->
-    <div class="col-span-4 md:col-span-6 ...">
+    <div class="col-span-12 md:col-span-10 ...">
         <!-- modal body  -->
       <div  id="modalBody"
       class= "hidden animation fixed z-50 flex justify-center items-center w-full md:inset-0 ">
@@ -149,15 +194,16 @@
       <!-- modal end here  -->
   
     </div>
-        <div class="p-2">
-            <h3 class="font-bold">Trending Topics</h3>
-            <div class="flex flex-row gap-3">
-           <p>Design Thinking</p>
-            <p>Technology</p>
-            <p>Web3</p>
-            <p>Programming</p>
-        <p>AI</p>
-        </div>
+        <div class="m-2">
+            <h3 class="font-bold text-[20px]">Trending Topics</h3>
+
+            <ul class="flex flex-row items-center gap-3">
+            <li class="cursor-pointer">-Design Thinking</li>
+            <li class="cursor-pointer">-Technology</li>
+            <li class="cursor-pointer">-Web3</li>
+            <li class="cursor-pointer">-Programming</li>
+            <li class="cursor-pointer">-AI</li>
+        </ul>
         </div>
         <!-- posts -->
          <section class="" id="allPosts">

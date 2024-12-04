@@ -256,35 +256,15 @@ work.addEventListener('click',(async()=>{
         console.log(e)
     }
 }))
-// let searchBar = document.getElementById('searchBar')
-// let searchBtn = document.getElementById('searchBtn')
-// searchBtn.addEventListener('click',(()=>{
-//     let searchValue = searchBar.value.toLowerCase()
 
-//     console.log(searchValue)
-//     // switch () {
-//     //     case "auth/invalid-email":
-//     //         Swal.fire("Add/Invalid Email");
-//     //         break;
-//     //     case "auth/weak-password":
-//     //         Swal.fire("Password Should be atleast 6 Characters");
-//     //         break;
-//     //     case "auth/missing-password":
-//     //         Swal.fire("Password is Missing");
-//     //         break;
-//     //     case "auth/email-already-in-use":
-//     //         Swal.fire("Account Already Exists");
-//     //         break;
-
-//     //     default:
-//     //         console.log('huh')
-//     // }
-// }))
 
 addPostBtn.addEventListener('click',(async()=>{
     modal.classList.remove('hidden')
       
 
+}))
+document.getElementById('addPost2').addEventListener('click',(()=>{
+    modal.classList.remove('hidden')
 }))
 doneBtn.addEventListener("click",(async()=>{
     try {
