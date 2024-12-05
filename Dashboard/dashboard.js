@@ -258,7 +258,7 @@ work.addEventListener('click',(async()=>{
 }))
 
 
-addPostBtn.addEventListener('click',(async()=>{
+addPost2.addEventListener('click',(async()=>{
     modal.classList.remove('hidden')
       
 
